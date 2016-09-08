@@ -156,16 +156,9 @@ bio.display = function() {
 
   //CONTACTS
   var formattedContactsMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-  //$("#header").append(formattedContactsMobile);
-
   var formattedContactsEmail = HTMLemail.replace("%data%", bio.contacts.email);
-  //$("#header").append(formattedContactsEmail);
-
   var formattedContactsGithub = HTMLgithub.replace("%data%", bio.contacts.github);
-  //$("#header").append(formattedContactsGithub);
-
   var formattedContactsLocation = HTMLlocation.replace("%data%", bio.contacts.location);
-  //$("#header").append(formattedContactsLocation);
 
   var formattedContacts = formattedContactsMobile + formattedContactsEmail + formattedContactsGithub + formattedContactsLocation;
 
