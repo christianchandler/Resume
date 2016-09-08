@@ -45,7 +45,7 @@ var bio = {
   "name": "Christian Chandler",
   "role": "Web Developer",
   "welcomeMessage":"Hard working, focused and a creative thinker. ",
-  "bioPic" : "images/me.png",
+  "biopic" : "images/me.png",
 
   "contacts" : {
     "mobile" : "868-339-3838",
@@ -150,7 +150,7 @@ bio.display = function() {
 
 
   //BIOPIC
-  var formattedbioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+  var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
   $("#header").append(formattedbioPic);
 
 
