@@ -50,7 +50,7 @@ var bio = {
   "contacts" : {
     "mobile" : "868-339-3838",
     "email" : "mrchristianchandler@gmail.com",
-    "github" : "24",
+    "github" : "christianchandler",
     "location" : "Trinidad and Tobago"
   },
     "skills": ["Business Development", "Marketing Development", "Front End Development", "Communication", "Organization"]
@@ -148,11 +148,9 @@ bio.display = function() {
   var formattedwelcomeMessage = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
   $("#header").append(formattedwelcomeMessage);
 
-
   //BIOPIC
-  var formattedbioPic = HTMLbioPic.replace("%data%", bio.biopic);
-  $("#header").append(formattedbioPic);
-
+  var formattedbiopic = HTMLbioPic.replace("%data%", bio.biopic);
+  $("#header").append(formattedbiopic);
 
   //CONTACTS
   var formattedContactsMobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
@@ -160,10 +158,7 @@ bio.display = function() {
   var formattedContactsGithub = HTMLgithub.replace("%data%", bio.contacts.github);
   var formattedContactsLocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-  var formattedContacts = formattedContactsMobile + formattedContactsEmail + formattedContactsGithub + formattedContactsLocation;
-
-  $("#topContacts").append(formattedContacts);
-  $("#footerContacts").append(formattedContacts);
+  $("#topContacts, #footerContacts").append(formattedContactsMobile + formattedContactsEmail + formattedContactsGithub + formattedContactsLocation);
 
 
   //SKILLS
@@ -189,9 +184,8 @@ education.display = function() {
     var formattedschoolDates = HTMLschoolDates.replace("%data%", education.schools[schools].dates);
     var formattedschoolMajor = HTMLschoolMajor.replace("%data%",education.schools[schools].majors);
 
-    $(".education-entry:last").append(formattedschoolName);
+    $(".education-entry:last").append(formattedschoolName+formattedschoolDegree);
     $(".education-entry:last").append(formattedschoolLocation);
-    $(".education-entry:last").append(formattedschoolDegree);
     $(".education-entry:last").append(formattedschoolDates);
     $(".education-entry:last").append(formattedschoolMajor);
   }
@@ -205,8 +199,7 @@ education.display = function() {
     var formattedonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses[online].dates);
     var formattedonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[online].url);
 
-    $(".education-entry:last").append(formattedonlineTitle);
-    $(".education-entry:last").append(formattedonlineSchool);
+    $(".education-entry:last").append(formattedonlineTitle+formattedonlineSchool);
     $(".education-entry:last").append(formattedonlineDates);
     $(".education-entry:last").append(formattedonlineURL);
   }
